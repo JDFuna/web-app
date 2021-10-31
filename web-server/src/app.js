@@ -7,21 +7,15 @@ const forecast = require('./utils/forecast')
 
 
 console.log(__dirname)
-// D:\3rd Year\4th Year\Web\new\web-server\src
-
-// console.log(__filename)
-// D:\3rd Year\4th Year\Web\new\web-server\src\app.js
-
-// console.log(path.join(__dirname, '../public'))
 
 const app = express()
 const port = process.env.PORT || 3000
-// Define paths for Express Config
+
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname,'../templates/views')
 const partialsPath= path.join(__dirname, '../templates/partials')
 
-// Set Handlebars engine and views location
+
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
@@ -34,25 +28,16 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) =>{
     res.render('index',{
         title: 'Weather',
-        name: "John Mathew Diño"
+        name: "Judy D. Funa"
     })
 })
 
 // app.com/help
 app.get('/help', (req, res) =>{
-    // res.send({
-    //     name: 'Mathew',
-    //     age: 21
-    // })
-    // res.send([{
-    //     name: 'Mathew',
-    // },{
-    //     name: 'Juan'
-    // }])
     res.render('help',{
         helpText: ' This is the text',
         title: 'Help',
-        name: 'John Mathew Diño'
+        name: 'Judy D. Funa'
     })
 })
 
@@ -60,7 +45,7 @@ app.get('/help', (req, res) =>{
 app.get('/about', (req, res) =>{
     res.render('about',{
         title: "About Me",
-        name: "John Mathew Diño"
+        name: "Judy D. Funa"
 
     })
 })
@@ -98,11 +83,6 @@ app.get('/weather', (req, res) =>{
             })
         })
     })
-    // res.send({
-    //     forecast: 'It is raining',
-    //     location: 'Bulan, Sorsogon',
-    //     address: req.query.address
-    // })
 })
 
 app.get('/products', (req, res) =>{
@@ -123,7 +103,7 @@ app.get('/products', (req, res) =>{
 app.get('/help/*', (req, res) =>{
     res.render('404',{
         title:'404',
-        name: 'John Mathew Diño',
+        name: 'Judy D. Funa',
         errorMessage: 'Help Article not found'
     })
 })
@@ -132,7 +112,7 @@ app.get('/help/*', (req, res) =>{
 app.get('*', (req, res) =>{
     res.render("404",{
         title: '404',
-        name: 'John Mathew Diño',
+        name: 'Judy D. Funa',
         errorMessage: 'Page not found'
     })
 })

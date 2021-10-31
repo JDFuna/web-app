@@ -9,14 +9,18 @@ body{
     flex-direction: column;
     min-height: 100vh;
 
-    /* NEW  */
-    background: #eaedf3;
+    background: url(../img/gif-bg.gif) no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .main-content{
     flex-grow: 1;
     
     
+}
+footer p {
+    color: #aeb0b3;
 }
 
 footer{
@@ -35,6 +39,8 @@ header{
 h1{
     font-size: 64px;
     margin-bottom: 16px;
+    color: #0e3c4c;
+    text-shadow: 2px 2px #eeeeee;
 }
 
 header a{
@@ -50,14 +56,18 @@ header a{
 input{
     border: 1px solid #cccccc;
     padding: 8px;
+    width: 250px;
+    height: 20px;
+    border-radius: 3%;
 }
 button{
     cursor: pointer;
     border: 1px solid solid black;
-    background: #2e3440;
+    background: #07405b;
     color: white;
     padding: 8px;
-
+    height: 37px;
+    border-radius: 10%;
 }
 
 .nav {
@@ -69,7 +79,8 @@ button{
 
 .nav li {
     display: inline;
-
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .nav a {
@@ -100,10 +111,19 @@ hr{
     font-size: xxx-large;
     font-weight: bold;
 }
-
+p:nth-child(1) {
+    font-size: 20px;
+    font-weight: 700;
+    color: #042a44;
+}
+i {
+    font-size: 18px;
+    font-weight: 600;
+}
 #bigmessage p{
     display: inline-block;
     vertical-align: top;
+    color: #042a44;
 }
 #icon{
     position: relative;
@@ -112,4 +132,9 @@ hr{
     
 }
 
-
+.about h3 {
+    color: #042a44
+}
+.about p {
+    color: white;
+}

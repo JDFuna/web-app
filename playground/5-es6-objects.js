@@ -12,7 +12,6 @@ const user = {
 console.log(user)
 
 
-
 const product = {
     label : 'Red Notebook',
     price: 3,
@@ -22,7 +21,7 @@ const product = {
 }
 
 
-const transaction = (type, {label, stock}) =>{
+const transaction = (type, {label, stock = 0} = {}) =>{
     console.log(type, label, stock)
 }
 
