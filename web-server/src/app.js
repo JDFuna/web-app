@@ -28,7 +28,7 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) =>{
     res.render('index',{
         title: 'Weather',
-        name: "Judy D. Funa"
+        name: "Funa, Pamplona, Alvarez, Gaton"
     })
 })
 
@@ -37,7 +37,7 @@ app.get('/help', (req, res) =>{
     res.render('help',{
         helpText: ' This is the text',
         title: 'Help',
-        name: 'Judy D. Funa'
+        name: 'Funa, Pamplona, Alvarez, Gaton'
     })
 })
 
@@ -45,7 +45,7 @@ app.get('/help', (req, res) =>{
 app.get('/about', (req, res) =>{
     res.render('about',{
         title: "About Me",
-        name: "Judy D. Funa"
+        name: "Funa, Pamplona, Alvarez, Gaton"
 
     })
 })
@@ -103,7 +103,7 @@ app.get('/products', (req, res) =>{
 app.get('/help/*', (req, res) =>{
     res.render('404',{
         title:'404',
-        name: 'Judy D. Funa',
+        name: 'Funa, Pamplona, Alvarez, Gaton',
         errorMessage: 'Help Article not found'
     })
 })
@@ -112,7 +112,7 @@ app.get('/help/*', (req, res) =>{
 app.get('*', (req, res) =>{
     res.render("404",{
         title: '404',
-        name: 'Judy D. Funa',
+        name: 'Funa, Pamplona, Alvarez, Gaton',
         errorMessage: 'Page not found'
     })
 })
